@@ -18,7 +18,7 @@ char **tokenize_line(char *line)
 		exit(EXIT_FAILURE);
 	}
 
-	token = strtok(line, " \t\r\n");
+	token = strtok(line, " \t\n");
 	while (token != NULL)
 	{
 		tokens[i++] = token;
@@ -33,7 +33,7 @@ char **tokenize_line(char *line)
 				exit(EXIT_FAILURE);
 			}
 		}
-		token = strtok(NULL, " \t\r\n");
+		token = strtok(NULL, " \t\n");
 	}
 	tokens[i] = NULL;
 

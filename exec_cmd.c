@@ -17,7 +17,7 @@ void execute_cmd(char *line)
 		free(argv);
 		return;
 	}
-	if (handle_builtin(argv)) /* Vérifie si c’est un builtin comme "exit" */
+	if (handle_builtin(argv))
 		return;
 	cmd_path = find_command_path(argv[0]);
 	if (!cmd_path)

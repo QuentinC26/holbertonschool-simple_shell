@@ -1,0 +1,70 @@
+.TH SIMPLE_SHELL 1 "April 2025" "Holberton School" "User Commands"
+.SH NAME
+simple_shell \- a very basic UNIX command line interpreter
+.SH SYNOPSIS
+.B simple_shell
+.SH DESCRIPTION
+.B simple_shell
+is a lightweight UNIX command line interpreter that executes commands typed by the user.
+
+It supports:
+.IP \[bu] 2
+Reading from standard input
+.IP \[bu]
+Running commands with no arguments
+.IP \[bu]
+Handling the EOF signal (Ctrl+D)
+.IP \[bu]
+Printing a prompt when interactive
+.IP \[bu]
+Command execution via
+.B execve()
+.IP \[bu]
+Basic error handling
+.IP \[bu]
+PATH resolution (if implemented)
+.PP
+The shell does not support advanced features such as:
+.IP \[bu]
+Pipes (|)
+.IP \[bu]
+Redirections (>, <)
+.IP \[bu]
+Wildcards (*)
+.IP \[bu]
+Built-in commands (except
+.B exit
+and
+.B env
+)
+.SH OPTIONS
+This shell takes no options. Just run
+.B ./simple_shell
+and type a command.
+.SH USAGE
+.B ./simple_shell
+
+Displays a prompt and waits for the user to type a command.
+
+.SH EXAMPLES
+.TP
+\fB./simple_shell\fR
+Starts the shell.
+.TP
+\fBls\fR
+Executes the ls command.
+.TP
+\fB/bin/ls\fR
+Executes ls with a full path.
+.TP
+\fBexit\fR
+Exits the shell.
+
+.SH AUTHOR
+Written by Holberton students Vyckash as part of the simple_shell project.
+
+.SH SEE ALSO
+.BR sh (1),
+.BR execve (2),
+.BR fork (2),
+.BR getenv (3)

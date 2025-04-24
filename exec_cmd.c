@@ -15,7 +15,6 @@ void execute_cmd(char *line)
 		free(argv);
 		return;
 	}
-
 	cmd_path = find_command_path(argv[0]);
 	if (!cmd_path)
 	{
@@ -23,7 +22,6 @@ void execute_cmd(char *line)
 		free(argv);
 		return;
 	}
-
 	pid = fork();
 	if (pid == -1)
 	{
@@ -32,7 +30,6 @@ void execute_cmd(char *line)
 		free(cmd_path);
 		return;
 	}
-
 	if (pid == 0)
 	{
 		if (execve(cmd_path, argv, environ) == -1)

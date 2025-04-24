@@ -13,7 +13,7 @@ char *find_command_path(char *command)
 	if (stat(command, &st) == 0)
 		return (strdup(command)); /* déjà un chemin absolu ou relatif valide */
 
-	path = getenv("PATH");
+	path = my_getenv("PATH");
 	if (!path)
 		return (NULL);
 

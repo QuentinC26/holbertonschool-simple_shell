@@ -7,15 +7,19 @@
 int main(void)
 {
 	char *line;
+	int interactive = isatty(STDIN_FILENO);
 
 	while (1)
 	{
-		display_prompt();
+		if (interactive)
+			display_prompt();
+
 		line = read_line();
 
-		if (line == NULL) /* Ctrl+D */
+		if (line == NULL)
 		{
-			write(STDOUT_FILENO, "\n", 1);
+			if (interactive)
+				printf("\n");
 			break;
 		}
 

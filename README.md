@@ -169,9 +169,9 @@ exit
 
 - [@EmmanuelMOUMBOUILOU](https://github.com/QuentinC26/holbertonschool-simple_shell)
 
-- [@QuentinC26] (https://github.com/QuentinC26/holbertonschool-simple_shell)
+- [@QuentinC26](https://github.com/QuentinC26/holbertonschool-simple_shell)
 
-- [@Dj-kvt] (https://github.com/QuentinC26/holbertonschool-simple_shell)
+- [@Dj-kvt](https://github.com/QuentinC26/holbertonschool-simple_shell)
 
 ## 📖 Manual
 

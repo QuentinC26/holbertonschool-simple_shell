@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * read_line - Lit la ligne entrée par l’utilisateur
- * Return: string (ligne), ou NULL si EOF
+ * read_line - read a line from stdin
+ * Return: the line read or NULL on failure
  */
 char *read_line(void)
 {

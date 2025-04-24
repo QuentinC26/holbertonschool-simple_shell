@@ -1,9 +1,10 @@
 #include "shell.h"
 
 /**
- * handle_builtin - Gère les commandes internes comme "exit" et "env"
- * @argv: tableau des arguments
- * Return: 1 si un builtin a été exécuté, 0 sinon
+ * handle_builtin - Handles built-in commands
+ * @argv: The array of arguments
+ *
+ * Return: 1 if a built-in command was executed, 0 otherwise
  */
 int handle_builtin(char **argv)
 {

@@ -1,9 +1,10 @@
 #include "shell.h"
 
 /**
- * tokenize_line - Découpe une ligne en tokens (commande + args)
- * @line: ligne brute de l'utilisateur
- * Return: tableau de tokens (NULL-terminated)
+ * tokenize_line - Tokenizes a line of input into an array of strings
+ * @line: The line to tokenize
+ *
+ * Return: An array of strings (tokens), or NULL on failure
  */
 char **tokenize_line(char *line)
 {

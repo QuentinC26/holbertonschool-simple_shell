@@ -1,9 +1,10 @@
 #include "shell.h"
 
 /**
- * find_command_path - Cherche le chemin absolu d'une commande dans le PATH
- * @command: nom de la commande
- * Return: chemin complet si trouvé, NULL sinon
+ * find_command_path - Finds the full path of a command
+ * @command: The command to find
+ *
+ * Return: The full path of the command, or NULL if not found
  */
 char *find_command_path(char *command)
 {

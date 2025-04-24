@@ -11,13 +11,13 @@ char *find_command_path(char *command)
 	struct stat st;
 
 	if (stat(command, &st) == 0)
-		return (_strdup(command)); /* déjà un chemin absolu ou relatif valide */
+		return (strdup(command)); /* déjà un chemin absolu ou relatif valide */
 
 	path = getenv("PATH");
 	if (!path)
 		return (NULL);
 
-	path_copy = _strdup(path);
+	path_copy = strdup(path);
 	dir = strtok(path_copy, ":");
 
 	while (dir)

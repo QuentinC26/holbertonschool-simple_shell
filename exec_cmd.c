@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * execute_cmd - Exécute une commande dans un processus enfant
- * @line: ligne de commande à exécuter
+ * execute_cmd - execute a command in the child process
+ * @line: command line for exectute
  * Return: void
  */
 
@@ -17,10 +17,8 @@ void execute_cmd(char *line)
 		free(argv);
 		return;
 	}
-
 	if (handle_builtin(argv)) /* Vérifie si c’est un builtin comme "exit" */
 		return;
-
 	cmd_path = find_command_path(argv[0]);
 	if (!cmd_path)
 	{
@@ -28,7 +26,6 @@ void execute_cmd(char *line)
 		free(argv);
 		return;
 	}
-
 	pid = fork();
 	if (pid == -1)
 	{
@@ -37,7 +34,6 @@ void execute_cmd(char *line)
 		free(cmd_path);
 		return;
 	}
-
 	if (pid == 0)
 	{
 		if (execve(cmd_path, argv, environ) == -1)

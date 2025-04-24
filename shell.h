@@ -7,6 +7,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <sys/stat.h>
 
 extern char **environ;
 
@@ -15,6 +16,9 @@ char *read_line(void);
 void execute_cmd(char *line);
 char *_strdup(const char *str);
 char **tokenize_line(char *line);
+int handle_builtin(char **argv);
+char *find_command_path(char *command);
+
 
 
 #endif

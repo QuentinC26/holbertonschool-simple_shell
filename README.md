@@ -167,11 +167,11 @@ exit
 
 ## 👥 Authors
 
-- [Your Name] <[your_email@domain.com]>
+- [@EmmanuelMOUMBOUILOU](https://github.com/QuentinC26/holbertonschool-simple_shell)
 
-- [Collaborator Name] <[collaborator_email]>
+- [@QuentinC26] (https://github.com/QuentinC26/holbertonschool-simple_shell)
 
-- [Collaborator Name] <[collaborator_email]>
+- [@Dj-kvt] (https://github.com/QuentinC26/holbertonschool-simple_shell)
 
 ## 📖 Manual
 

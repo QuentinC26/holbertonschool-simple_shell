@@ -13,8 +13,9 @@ extern char **environ;
 void display_prompt(void);
 char *read_line(void);
 void execute_cmd(char *line);
-char *_strdup(const char *str);
 char **tokenize_line(char *line);
+char *my_getenv(const char *name);
+char *find_command_path(char *command);
 
 
 #endif

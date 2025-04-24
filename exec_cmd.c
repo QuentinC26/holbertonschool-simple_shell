@@ -1,31 +1,28 @@
 #include "shell.h"
 
 /**
- * execute_cmd - Exécute une commande avec arguments
- * @line: ligne de commande (non NULL)
+ * execute_cmd - Lance la commande avec execve
+ * @line: commande entrée par l’utilisateur (chemin complet)
  */
 void execute_cmd(char *line)
 {
 	pid_t pid;
-	char **argv = tokenize_line(line);
+	char *argv[2];
 
-	if (argv[0] == NULL)
-	{
-		free(argv);
-		return;
-	}
+	argv[0] = line;
+	argv[1] = NULL;
 
 	pid = fork();
 
 	if (pid == -1)
 	{
-		perror("fork");
-		free(argv);
+		perror("Error");
 		return;
 	}
 
 	if (pid == 0)
 	{
+		/* Enfant */
 		if (execve(argv[0], argv, environ) == -1)
 		{
 			perror("./shell");
@@ -34,7 +31,7 @@ void execute_cmd(char *line)
 	}
 	else
 	{
+		/* Parent */
 		wait(NULL);
-		free(argv);
 	}
 }

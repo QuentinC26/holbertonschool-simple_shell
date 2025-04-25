@@ -13,12 +13,6 @@ int handle_builtin(char **argv)
 	if (!argv || !argv[0])
 		return (0);
 
-	if (strcmp(argv[0], "exit") == 0)
-	{
-		free(argv);
-		exit(0);
-	}
-
 	if (strcmp(argv[0], "env") == 0)
 	{
 		for (count = 0; environ[count]; count++)

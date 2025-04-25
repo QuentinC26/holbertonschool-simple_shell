@@ -21,7 +21,16 @@ int main(void)
 				write(STDOUT_FILENO, "\n", 1);
 			break;
 		}
-
+		if (strcmp(line, "exit") == 0)
+		{
+			free(line);
+			break;
+		}
+		if (strcmp(line, "\n") == 0)
+		{
+			free(line);
+			continue;
+		}
 		if (line[0] != '\0')
 			execute_cmd(line);
 

@@ -114,7 +114,8 @@ total 0
 ## 🧠 Flowchart (Overview)
 
 ### The operation of the shell can be summarized as follows :
-- https://drive.google.com/file/d/1V32JKZbjnvkGbfXL93roDFPTAtDLHuGI/view
+![Flowchart of Simple Shell drawio](https://github.com/user-attachments/assets/e79d759a-6076-464f-8198-cad6210cfd64)
+
 
 ## 📁 Project Structure
 
